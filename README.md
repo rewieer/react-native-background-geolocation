@@ -1,14 +1,18 @@
-# @mauron85/react-native-background-geolocation
+# @rewieer/react-native-background-geolocation
 
-[![CircleCI](https://circleci.com/gh/mauron85/react-native-background-geolocation/tree/master.svg?style=shield)](https://circleci.com/gh/mauron85/react-native-background-geolocation/tree/master)
+## Read carefully !
+This is a fork of the original react-native-background-geolocation from mauron85. It has kept
+version 0.5.3. It only fixes background-geolocation on Android without notification.
+Bear in mind that, although it works (at least pre Android 9), it looks like it's not a decisive solution.
 
+Moreover this package isn't up to date with the original one. 
 ## We're moving
 
-Npm package is now [@mauron85/react-native-background-geolocation](https://www.npmjs.com/package/@mauron85/react-native-background-geolocation)!
+Npm package is now [@rewieer/react-native-background-geolocation](https://www.npmjs.com/package/@rewieer/react-native-background-geolocation)!
 
 # Donation
 
-Please support my work and continued development with your donation.
+Please support mauron85 work and continued development with your donation.
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6GW8FPTE6TV5J)
 
@@ -145,7 +149,7 @@ The repository [react-native-background-geolocation-example](https://github.com/
 ```javascript
 import React, { Component } from 'react';
 import { Alert } from 'react-native';
-import BackgroundGeolocation from '@mauron85/react-native-background-geolocation';
+import BackgroundGeolocation from '@rewieer/react-native-background-geolocation';
 
 class BgTracking extends Component {
   componentDidMount() {
@@ -268,7 +272,7 @@ export default BgTracking;
 Add the package to your project
 
 ```
-yarn add @mauron85/react-native-background-geolocation
+yarn add @rewieer/react-native-background-geolocation
 ```
 
 ### Automatic setup
@@ -276,7 +280,7 @@ yarn add @mauron85/react-native-background-geolocation
 Link your native dependencies
 
 ```
-react-native link @mauron85/react-native-background-geolocation
+react-native link @rewieer/react-native-background-geolocation
 ```
 
 ### Manual setup
@@ -287,10 +291,10 @@ In `android/settings.gradle`
 
 ```gradle
 ...
-include ':@mauron85_react-native-background-geolocation-common'
-project(':@mauron85_react-native-background-geolocation-common').projectDir = new File(rootProject.projectDir, '../node_modules/@mauron85/react-native-background-geolocation/android/common')
-include ':@mauron85_react-native-background-geolocation'
-project(':@mauron85_react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/@mauron85/react-native-background-geolocation/android/lib')
+include ':@rewieer_react-native-background-geolocation-common'
+project(':@rewieer_react-native-background-geolocation-common').projectDir = new File(rootProject.projectDir, '../node_modules/@rewieer/react-native-background-geolocation/android/common')
+include ':@rewieer_react-native-background-geolocation'
+project(':@rewieer_react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/@rewieer/react-native-background-geolocation/android/lib')
 ...
 ```
 
@@ -299,7 +303,7 @@ In `android/app/build.gradle`
 ```gradle
 dependencies {
     ...
-    compile project(':@mauron85_react-native-background-geolocation')
+    compile project(':@rewieer_react-native-background-geolocation')
     ...
 }
 ```
@@ -329,7 +333,7 @@ public class MainApplication extends Application implements ReactApplication {
 #### iOS setup
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Add `./node_modules/@mauron85/react-native-background-geolocation/ios/RCTBackgroundGeolocation.xcodeproj`
+2. Add `./node_modules/@rewieer/react-native-background-geolocation/ios/RCTBackgroundGeolocation.xcodeproj`
 3. In the XCode project navigator, select your project, select the `Build Phases` tab and in the `Link Binary With Libraries` section add **libRCTBackgroundGeolocation.a**
 4. Add `UIBackgroundModes` **location** to `Info.plist`
 5. Add `NSMotionUsageDescription` **App requires motion tracking** to `Info.plist` (required by ACTIVITY_PROVIDER)
